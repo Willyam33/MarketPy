@@ -1,0 +1,15 @@
+import database_functions
+print('PREDICTIONS')
+status, results = database_functions.get_all_predictions()
+if status!='KO':
+    print(results.fetchall())
+print('MODELS')
+print([row for row in database_functions.get_all_models()])
+print('PRODUCTION_MODELS')
+print([row for row in database_functions.get_all_production_models()])
+print('DATASETS')
+print([row for row in database_functions.get_all_datasets()])
+print('USERS')
+print([row for row in database_functions.get_all_users()])
+print('SCORINGS')
+print([row for row in database_functions.get_all_scorings()])
